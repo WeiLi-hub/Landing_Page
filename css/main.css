@@ -1,9 +1,16 @@
-body {
+/* body {
     background-color: #FFFFFF;
     padding: 0;
     margin: 0;
     text-align: center;
     font-family: 'Roboto', arial;
+} */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
 }
 
 html{
@@ -13,16 +20,18 @@ html{
 /* navbar section */
 .navbar{
     display: flex;
-    background-color: #93aacb;
+    background-color: #1F2937;
     align-items: center;
     position: fixed;
     width: 100%;
+    border-bottom: 1px solid #333333;
 }
 .navbar img{
     margin-left: 50px;
-    width: 36px;
+    width: 50px;
     height: auto;
     border: 4px solid burlywood;
+    border-radius: 50%;
     object-fit: contain;
 }
 
@@ -38,11 +47,11 @@ html{
     display: flex;
     color: #E5E7EB;
     font-size: 20px;
-    padding: 0 16px;
-    font-family: 'Roboto', arial;
+    padding: 16px 16px;
 }
 
 .link a:hover{
+    transition-duration: 0.5s;
     background-color: lightblue;
     cursor: pointer;
     text-shadow: black 2px 2px;
@@ -51,10 +60,11 @@ html{
 /* Introduction section */
 .intro{
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #1F2937;
-    padding: 100px;
+    background-color:#232e3e;
+    padding: 150px 0px 100px 0px;
 }
 
 .intro_context{
@@ -71,15 +81,67 @@ html{
     font-size: 46px;
     font-weight: bold;
     color: #F9FAF8;
-    margin: 0;
+    padding: 0px 0px 20px 0px;
 }
 
-.intro_image img{
+.intro_context p{
+    padding: 20px 0px;
+    color:grey;
+}
+
+.intro .intro_slides{
+    display: none;
+}
+
+.slided_show{
+    border: 3px inset #b86161;
     width: 500px;
     height: 350px;
+    box-shadow: 0 0 30px rgba(244, 249, 177, 0.975);
 }
 
-.intro button{
+.slided_show img{
+    width: 100%;
+    height: 100%;
+}
+
+/* .slided_show button{
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    cursor: pointer;
+} */
+
+.slided_show button{
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top:60%;
+    transform: translateY(-50%);
+    transition: 0.1s;
+}
+
+.left_display{
+    left: 700px;
+}
+
+.right_display{
+    right: 10px;
+}
+/* .slided_show .right_display{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+} */
+
+
+.intro_context button{
     display: block; 
     text-align: center;
     width: 130px;
@@ -97,7 +159,10 @@ html{
 
 /* body section */
 .body_context{
+    padding: 20px;
     align-items: center;
+    text-align: center;
+    
 }
 
 .img_container{
@@ -112,8 +177,8 @@ html{
     object-fit:contain;
     object-position: right;
     border: 3px solid #565759;
-    border-radius: 15px;
-    margin: 5px 20px -10px 20px;
+    border-radius: 50%;
+    margin: 5px 20px 10px 20px;
 }
 
 .body_context img:hover{
@@ -197,6 +262,7 @@ html{
 }
 /* copy_right section */
 .copy_right{
+    text-align: center;
     background-color: #1F2937;
     color:#FFFFFF;
     font-family: 'Roboto', a 20px;

@@ -9,21 +9,27 @@
     </head>
     <body>
         <nav class = "navbar">
-            <a href = ""><img src = "img/cpo_vehicles_and_driving_icon.jpg"></a>
+            <a href = ""><img src = "img/logo.png"></a>
             <ul class = "link">
                 <li><a href = "landing_page.html">About</a></li>
                 <li><a href = "landing_page.html">Shop</a></li>
-                <li><a href = "landing_page.html">Contact</a></li>
+                <li><a href = "#follow_up">Contact</a></li>
             </ul>
         </nav>
         <div class = "intro">
             <div class = "intro_context">
-                <h1>This is the Header</h1>
+                <h1>Welcome!</h1>
                 <p>This is a paragraph</p>
                 <button type = "button">Sign up</button>
             </div>
-            <div class = "intro_image">
-                <img src = "img/intro.jpg" alt = "main_page">
+            <div class = "slided_show">
+                <img class = "intro_slides" src ="img/sedan.webp">
+                <img class = "intro_slides" src ="img/sport.webp">
+                <img class = "intro_slides" src ="img/suv.webp">
+                <img class = "intro_slides" src ="img/ev.webp">
+
+                <button class = "left_display" onclick="plusDivs(-1)">&#8810;</button>
+                <button class = "right_display" onclick="plusDivs(1)">&#8811;</button>
             </div>
         </div>
 
@@ -54,7 +60,7 @@
             <b>-- by Weiqiang Li</b>
         </div>
 
-        <div class = "follow_up">
+        <div id = "follow_up" class = "follow_up">
             <div class = "follow_up_text">
                 <h3>That is a test head</h3>
                 <p>Follow me on social media media media media</p>
@@ -78,5 +84,7 @@
         <div class = "copy_right">
             <p>Copy Right © Ordin Project</p>
         </div>
+
+        <script src = "javascript/slide_show.js"></script>
     </body>
 </html>
